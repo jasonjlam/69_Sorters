@@ -1,7 +1,12 @@
 /**
   Implement an insertion sort, in the Sorters structure
+  
+  Precondition: A list of at least one or more elements
+  Postcondition: A sorted list with the same elements
  */
 import java.util.ArrayList;
+
+
 
 public class InsertionSorter extends Sorter {
 
@@ -16,6 +21,10 @@ public class InsertionSorter extends Sorter {
     
 
     /**
+    
+    For every element in the list calls the method insert1 to place the element 
+    in the sorted region
+    
       sort the user's data, implementing insertion sort
      */
     public void mySort() {
@@ -23,7 +32,11 @@ public class InsertionSorter extends Sorter {
             insert1 (elements, i);
         }
     }
-    
+    /**
+    Given a sorted and unsorted region, takes the first element of the 
+    unsorted region and shifts all sorted elements larger than it to the right,
+    inserting that element into the spot left empty.
+    **/
     public static void insert1(
                                              ArrayList<String> list, 
                                              int alreadyInserted) {
